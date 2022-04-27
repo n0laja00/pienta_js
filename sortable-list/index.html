@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sortable list</title>
+        <link rel="stylesheet" href="css/tyylit.css">
+        <meta name="author" content="Janne Lammela">
+        <meta name="description" content="Sortable list to CV"> 
+    </head>
+    <body>
+        <main>
+
+            <div class="dropdown">
+                <button class="dropbtn">Sorting methods</button>
+                <div class="content">
+                  <button onclick="firstname_sort()" onfocus="clear()">Firstname</button>
+                  <button onclick="lastname_sort()">Lastname</button>
+                  <button onclick="birthday_sort()">Birthday</button>
+                </div>
+            </div>  
+            <div>
+                <h2>Add friends!</h2>
+                <label for="firstname_field">First name:</label> <br>
+                <input type="text" id="firstname_field" name="firstname_field"></input> <br>
+
+                <label for="lastname_field">Last name:</label><br>
+                <input type="text" id="lastname_field" name="lastname_field"></input> <br>
+
+                <label for="birthday_field">Birthday:</label>
+                <input type="date" id="birthday_field" name="birthday_field">
+                
+                <button onclick="add_friend()">Add friend!</button>
+                
+            </div>
+            <div>
+                <h2>Your list of friends!</h2>
+                <div id="friend_print">
+
+                </div>
+            </div>
+        </main>
+        <script src="js/base.js"></script>
+    </body>
+</html>
